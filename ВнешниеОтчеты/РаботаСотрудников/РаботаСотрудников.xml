@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<ExternalReport uuid="20dc393f-d849-4f56-b5aa-105ba6847b8c">
+		<InternalInfo>
+			<xr:ContainedObject>
+				<xr:ClassId>e41aff26-25cf-4bb6-b6c1-3f478a75f374</xr:ClassId>
+				<xr:ObjectId>9648e366-9da4-4681-81ab-a62ffed1f555</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:GeneratedType name="ExternalReportObject.РаботаСотрудников" category="Object">
+				<xr:TypeId>1a9a3a8d-04d5-4128-93ce-f39d392bc90b</xr:TypeId>
+				<xr:ValueId>f9868ca2-856b-42d1-90ea-7b19f2d1f91e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>РаботаСотрудников</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа сотрудников</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>&lt;ИГС-АВТО УАТ&gt; Суренков М.А. #6249</Comment>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<MainDataCompositionSchema>ExternalReport.РаботаСотрудников.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
+		</Properties>
+		<ChildObjects>
+			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+		</ChildObjects>
+	</ExternalReport>
+</MetaDataObject>
