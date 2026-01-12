@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>РаботаСотрудников</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТС</dataPath>
+			<field>ТС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НесколькоЗаписей</dataPath>
+			<field>НесколькоЗаписей</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несколько записей</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РежимРаботы</dataPath>
+			<field>РежимРаботы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредство</dataPath>
+			<field>ТранспортноеСредство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГосНомер</dataPath>
+			<field>ГосНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гос номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МодельТС</dataPath>
+			<field>МодельТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель ТС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Колонна</dataPath>
+			<field>Колонна</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	уатМестонахождениеТССрезПоследних.Организация КАК Организация,
+	уатМестонахождениеТССрезПоследних.Колонна КАК Колонна,
+	уатМестонахождениеТССрезПоследних.ТС КАК ТС
+ПОМЕСТИТЬ ВТ_МестонахождениеТССрезПоследних
+ИЗ
+	РегистрСведений.уатМестонахождениеТС.СрезПоследних КАК уатМестонахождениеТССрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	уатПутевойЛист.Ссылка КАК ПутевойЛист,
+	уатПутевойЛист.Смена КАК Смена,
+	уатПутевойЛист.ТранспортноеСредство КАК ТранспортноеСредство,
+	уатТС.ГосударственныйНомер КАК ГосударственныйНомер,
+	уатТС.Модель КАК Модель,
+	уатПутевойЛист.Водитель1 КАК Водитель1,
+	уатПутевойЛист.Водитель2 КАК Водитель2,
+	ВТ_МестонахождениеТССрезПоследних.Организация КАК Организация,
+	ВТ_МестонахождениеТССрезПоследних.Колонна КАК Колонна
+ПОМЕСТИТЬ ВТ_ПутЛист
+ИЗ
+	Документ.уатПутевойЛист КАК уатПутевойЛист
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МестонахождениеТССрезПоследних КАК ВТ_МестонахождениеТССрезПоследних
+		ПО уатПутевойЛист.Организация = ВТ_МестонахождениеТССрезПоследних.Организация
+			И уатПутевойЛист.ТранспортноеСредство = ВТ_МестонахождениеТССрезПоследних.ТС
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.уатТС КАК уатТС
+		ПО (уатТС.Ссылка = уатПутевойЛист.ТранспортноеСредство)
+ГДЕ
+	уатПутевойЛист.Проведен
+	И (уатПутевойЛист.ДатаВыезда МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ уатПутевойЛист.ДатаВозвращения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	уатТС.ГосударственныйНомер КАК ГосударственныйНомер,
+	уатТС.Модель КАК Модель,
+	уатРемонтныйЛист.Ссылка КАК Ссылка,
+	уатРемонтныйЛист.ТС КАК ТС,
+	ВЫБОР
+		КОГДА уатРемонтныйЛист.ВидОбслуживания = ЗНАЧЕНИЕ(Справочник.уатВидыОбслуживанияТС.ПустаяСсылка)
+			ТОГДА ВЫБОР
+					КОГДА уатРемонтныйЛист.ВидОбслуживания2 = ЗНАЧЕНИЕ(Справочник.уатВидыОбслуживанияТС.ПустаяСсылка)
+						ТОГДА ВЫБОР
+								КОГДА уатРемонтныйЛист.ВидОбслуживания3 = ЗНАЧЕНИЕ(Справочник.уатВидыОбслуживанияТС.ПустаяСсылка)
+									ТОГДА ""
+								ИНАЧЕ уатРемонтныйЛист.ВидОбслуживания3
+							КОНЕЦ
+					ИНАЧЕ уатРемонтныйЛист.ВидОбслуживания2
+				КОНЕЦ
+		ИНАЧЕ уатРемонтныйЛист.ВидОбслуживания
+	КОНЕЦ КАК ВидОбслуживания,
+	ВТ_МестонахождениеТССрезПоследних.Организация КАК Организация,
+	ВТ_МестонахождениеТССрезПоследних.Колонна КАК Колонна
+ПОМЕСТИТЬ ВТ_РемонтныеЛисты
+ИЗ
+	Документ.уатРемонтныйЛист КАК уатРемонтныйЛист
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.уатТС КАК уатТС
+		ПО уатРемонтныйЛист.ТС = уатТС.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_МестонахождениеТССрезПоследних КАК ВТ_МестонахождениеТССрезПоследних
+		ПО уатРемонтныйЛист.Организация = ВТ_МестонахождениеТССрезПоследних.Организация
+			И уатРемонтныйЛист.ТС = ВТ_МестонахождениеТССрезПоследних.ТС
+ГДЕ
+	уатРемонтныйЛист.Проведен
+	И (уатРемонтныйЛист.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ уатРемонтныйЛист.ДатаОкончания МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПутЛист.ПутевойЛист КАК ПутевойЛист,
+	ВТ_ПутЛист.Смена КАК Смена,
+	ВТ_ПутЛист.ТранспортноеСредство КАК ТранспортноеСредство,
+	ВТ_ПутЛист.ГосударственныйНомер КАК ГосударственныйНомер,
+	ВТ_ПутЛист.Модель КАК Модель,
+	ВТ_ПутЛист.Водитель1 КАК Сотрудник,
+	"Линия" КАК РежимРаботы,
+	ВТ_ПутЛист.Колонна КАК Колонна,
+	ВТ_ПутЛист.Организация КАК Организация
+ПОМЕСТИТЬ ВТ_ПутевыеЛисты
+ИЗ
+	ВТ_ПутЛист КАК ВТ_ПутЛист
+ГДЕ
+	ВТ_ПутЛист.Водитель1 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ПутЛист.ПутевойЛист,
+	ВТ_ПутЛист.Смена,
+	ВТ_ПутЛист.ТранспортноеСредство,
+	ВТ_ПутЛист.ГосударственныйНомер,
+	ВТ_ПутЛист.Модель,
+	ВТ_ПутЛист.Водитель2,
+	"Линия",
+	ВТ_ПутЛист.Колонна,
+	ВТ_ПутЛист.Организация
+ИЗ
+	ВТ_ПутЛист КАК ВТ_ПутЛист
+ГДЕ
+	ВТ_ПутЛист.Водитель2 &lt;&gt; ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПутевыеЛисты.ПутевойЛист КАК ПутевойЛист,
+	ВТ_ПутевыеЛисты.Сотрудник КАК Сотрудник,
+	ВТ_ПутевыеЛисты.ТранспортноеСредство КАК ТранспортноеСредство,
+	МИНИМУМ(ВТ_ПутевыеЛисты.Смена.Наименование) КАК СменаНаименование,
+	ВТ_ПутевыеЛисты.Колонна КАК Колонна,
+	ВТ_ПутевыеЛисты.Организация КАК Организация
+ПОМЕСТИТЬ ВТ_ПутевыеЛистыСотрудникТС
+ИЗ
+	ВТ_ПутевыеЛисты КАК ВТ_ПутевыеЛисты
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПутевыеЛисты.ПутевойЛист,
+	ВТ_ПутевыеЛисты.Сотрудник,
+	ВТ_ПутевыеЛисты.ТранспортноеСредство,
+	ВТ_ПутевыеЛисты.Колонна,
+	ВТ_ПутевыеЛисты.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ВТ_ПутевыеЛисты.ПутевойЛист) КАК Документ,
+	ВТ_ПутевыеЛисты.Смена КАК Смена,
+	ВТ_ПутевыеЛисты.ТранспортноеСредство КАК ТранспортноеСредство,
+	ВТ_ПутевыеЛисты.ГосударственныйНомер КАК ГосударственныйНомер,
+	ВТ_ПутевыеЛисты.Модель КАК Модель,
+	ВТ_ПутевыеЛисты.Сотрудник КАК Сотрудник,
+	ВТ_ПутевыеЛисты.РежимРаботы КАК РежимРаботы,
+	ВТ_ПутевыеЛисты.Колонна КАК Колонна,
+	ВТ_ПутевыеЛисты.Организация КАК Организация
+ПОМЕСТИТЬ ВТ_ДанныеДляОтчета
+ИЗ
+	ВТ_ПутевыеЛисты КАК ВТ_ПутевыеЛисты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ПутевыеЛистыСотрудникТС КАК ВТ_ПутевыеЛистыСотрудникТС
+		ПО ВТ_ПутевыеЛисты.Сотрудник = ВТ_ПутевыеЛистыСотрудникТС.Сотрудник
+			И ВТ_ПутевыеЛисты.ТранспортноеСредство = ВТ_ПутевыеЛистыСотрудникТС.ТранспортноеСредство
+			И ВТ_ПутевыеЛисты.Смена.Наименование = ВТ_ПутевыеЛистыСотрудникТС.СменаНаименование
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПутевыеЛисты.Смена,
+	ВТ_ПутевыеЛисты.ТранспортноеСредство,
+	ВТ_ПутевыеЛисты.ГосударственныйНомер,
+	ВТ_ПутевыеЛисты.Модель,
+	ВТ_ПутевыеЛисты.Сотрудник,
+	ВТ_ПутевыеЛисты.РежимРаботы,
+	ВТ_ПутевыеЛисты.Колонна,
+	ВТ_ПутевыеЛисты.Организация
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_РемонтныеЛисты.Ссылка,
+	NULL,
+	ВТ_РемонтныеЛисты.ТС,
+	ВТ_РемонтныеЛисты.ГосударственныйНомер,
+	ВТ_РемонтныеЛисты.Модель,
+	уатРемонтныйЛистИсполнители.Сотрудник,
+	"Ремонт" + " - " + ВТ_РемонтныеЛисты.ВидОбслуживания.Наименование,
+	ВТ_РемонтныеЛисты.Колонна,
+	NULL
+ИЗ
+	Документ.уатРемонтныйЛист.Исполнители КАК уатРемонтныйЛистИсполнители
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_РемонтныеЛисты КАК ВТ_РемонтныеЛисты
+		ПО уатРемонтныйЛистИсполнители.Ссылка = ВТ_РемонтныеЛисты.Ссылка
+ГДЕ
+	уатРемонтныйЛистИсполнители.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_РемонтныеЛисты.Ссылка
+			ИЗ
+				ВТ_РемонтныеЛисты КАК ВТ_РемонтныеЛисты)
+	И уатРемонтныйЛистИсполнители.Начало МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДанныеДляОтчета.Документ КАК Документ,
+	ЕСТЬNULL(ВТ_ДанныеДляОтчета.Смена, "") КАК Смена,
+	ВТ_ДанныеДляОтчета.ТранспортноеСредство КАК ТранспортноеСредство,
+	ВТ_ДанныеДляОтчета.ГосударственныйНомер КАК ГосНомер,
+	ВТ_ДанныеДляОтчета.Модель КАК МодельТС,
+	ВТ_ДанныеДляОтчета.Сотрудник КАК Сотрудник,
+	ВТ_ДанныеДляОтчета.РежимРаботы КАК РежимРаботы,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЗаписиПоСотрудникам.Количество, 0) &gt; 1
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК НесколькоЗаписей,
+	ВТ_ДанныеДляОтчета.Колонна КАК Колонна,
+	ВТ_ДанныеДляОтчета.Организация КАК Организация
+ИЗ
+	ВТ_ДанныеДляОтчета КАК ВТ_ДанныеДляОтчета
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВТ_ДанныеДляОтчета.Сотрудник КАК Сотрудник,
+			СУММА(1) КАК Количество
+		ИЗ
+			ВТ_ДанныеДляОтчета КАК ВТ_ДанныеДляОтчета
+		
+		СГРУППИРОВАТЬ ПО
+			ВТ_ДанныеДляОтчета.Сотрудник) КАК ЗаписиПоСотрудникам
+		ПО ВТ_ДанныеДляОтчета.Сотрудник = ЗаписиПоСотрудникам.Сотрудник</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НачалоПериода(&amp;ПериодОтчета.ДатаНачала, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ДобавитьКдате(КонецПериода(&amp;ПериодОтчета.ДатаОкончания, "День"), "Секунда", 1)</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отчет по работе сотрудников за период с </v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДатаНачала</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> по </v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДатаОкончание</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДатаНачала</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.ДатаНачала</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДатаОкончание</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.ДатаОкончания</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Заголовок</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по работе сотрудников</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РежимРаботы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Смена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГосНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МодельТС.ТипТС</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип ТС</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МодельТС</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>20df62ae-595c-4102-b0d0-b50e03efeb59</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>b7af8c03-eca4-42b7-aca9-2deba28fbaab</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Заголовок</dcsset:name>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВариантИспользованияГруппировки</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupUseVariant">AdditionalInformation</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Колонна</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Документ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

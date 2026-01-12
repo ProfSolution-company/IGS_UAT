@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектЗатрат</dataPath>
+			<field>ОбъектЗатрат</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ID</dataPath>
+			<field>ID</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевойЛист</dataPath>
+			<field>ПутевойЛист</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПрибытия</dataPath>
+			<field>АдресПрибытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредство</dataPath>
+			<field>ТранспортноеСредство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расход</dataPath>
+			<field>Расход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТарифа</dataPath>
+			<field>ВидТарифа</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель</dataPath>
+			<field>Водитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тариф</dataPath>
+			<field>Тариф</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Маршрут</dataPath>
+			<field>Маршрут</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеПеревозки</dataPath>
+			<field>НаправлениеПеревозки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресУбытия</dataPath>
+			<field>АдресУбытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГСМ</dataPath>
+			<field>ГСМ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Колонна</dataPath>
+			<field>Колонна</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТС</dataPath>
+			<field>ТС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПеревозки</dataPath>
+			<field>ВидПеревозки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектСтроительства</dataPath>
+			<field>ОбъектСтроительства</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПараметрВыработки</dataPath>
+			<field>ПараметрВыработки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГосударственныйНомер</dataPath>
+			<field>ГосударственныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Государственный номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВыставлено</dataPath>
+			<field>КоличествоВыставлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество выставлено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНеВыставленоНаНачалоПериода</dataPath>
+			<field>СуммаНеВыставленоНаНачалоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма не выставлено на начало периода</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаНеВыставлено</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель1</dataPath>
+			<field>Водитель1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пробег</dataPath>
+			<field>Пробег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробег</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заправлено</dataPath>
+			<field>Заправлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заправлено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказНаТС</dataPath>
+			<field>ЗаказНаТС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказчик</dataPath>
+			<field>Заказчик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказчик</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеВыставленоНаНачалоПериода</dataPath>
+			<field>КоличествоНеВыставленоНаНачалоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество не выставлено на начало периода</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоНеВыставлено</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеВыставлено</dataPath>
+			<field>КоличествоНеВыставлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество не выставлено</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КоличествоНеВыставлено</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНеВыставлено</dataPath>
+			<field>СуммаНеВыставлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма не выставлено</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаНеВыставлено</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВыставлено</dataPath>
+			<field>СуммаВыставлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма выставлено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПоПутевомуЛисту</dataPath>
+			<field>КоличествоПоПутевомуЛисту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество по путевому листу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоПутевомуЛисту</dataPath>
+			<field>СуммаПоПутевомуЛисту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма по путевому листу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ID КАК ID,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ПутевойЛист КАК ПутевойЛист,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Контрагент КАК Контрагент,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ТранспортноеСредство КАК ТранспортноеСредство,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ОбъектЗатрат КАК ОбъектЗатрат,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Проект КАК Проект,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ВидТарифа КАК ВидТарифа,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Тариф КАК Тариф,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.АдресПрибытия КАК АдресПрибытия,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.АдресУбытия КАК АдресУбытия,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.КоличествоНачальныйОстаток) КАК КоличествоНеВыставленоНаНачалоПериода,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.СуммаНачальныйОстаток) КАК СуммаНеВыставленоНаНачалоПериода,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.КоличествоКонечныйОстаток) КАК КоличествоНеВыставлено,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.СуммаКонечныйОстаток) КАК СуммаНеВыставлено,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.КоличествоРасход) КАК КоличествоВыставлено,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.СуммаРасход) КАК СуммаВыставлено,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.КоличествоПриход) КАК КоличествоПоПутевомуЛисту,
+	СУММА(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.СуммаПриход) КАК СуммаПоПутевомуЛисту
+ПОМЕСТИТЬ ВТ_Остатки
+ИЗ
+	РегистрНакопления.прОстаткиПоАктамИПутевымЛистам.ОстаткиИОбороты(началопериода(&amp;НачалоПериода, день), началопериода(&amp;КонецПериода, день), , , ) КАК прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты
+ГДЕ
+	ТИПЗНАЧЕНИЯ(прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ПутевойЛист) = ТИП(Документ.уатПутевойЛист)
+
+СГРУППИРОВАТЬ ПО
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ID,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ПутевойЛист,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Контрагент,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ТранспортноеСредство,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ОбъектЗатрат,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Проект,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.ВидТарифа,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.Тариф,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.АдресПрибытия,
+	прОстаткиПоАктамИПутевымЛистамОстаткиИОбороты.АдресУбытия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	уатПутевойЛист.Ссылка КАК ПутевойЛист,
+	уатПутевойЛист.Номер КАК Номер,
+	уатПутевойЛист.Дата КАК Дата,
+	уатПутевойЛист.Водитель1 КАК Водитель1,
+	уатПутевойЛист.Организация КАК Организация,
+	уатПутевойЛист.Подразделение КАК Подразделение,
+	уатПутевойЛист.Смена КАК Смена,
+	уатПутевойЛист.ТранспортноеСредство КАК ТранспортноеСредство,
+	уатПутевойЛистЗадание.ID КАК ID,
+	уатПутевойЛистЗадание.НомерСтроки КАК НомерСтроки,
+	уатПутевойЛистЗадание.Маршрут КАК Маршрут,
+	уатПутевойЛистЗадание.ЗаказНаТС КАК ЗаказНаТС,
+	уатПутевойЛистЗадание.пр_ОбъектЗатрат КАК ОбъектЗатрат,
+	уатПутевойЛистЗадание.пр_Проект КАК Проект,
+	уатПутевойЛистЗадание.пр_ВидТарифа КАК ВидТарифа,
+	уатПутевойЛистЗадание.пр_Тариф КАК пр_Тариф,
+	уатПутевойЛистЗадание.пр_Сумма КАК пр_Сумма,
+	уатЗаказГрузоотправителя.Контрагент КАК Заказчик,
+	уатПутевойЛистРасходГСМ.РасходПоФакту КАК РасходПоФакту,
+	уатПутевойЛистРасходГСМ.Пробег КАК Пробег,
+	уатПутевойЛист.ПробегПоGPS КАК ПробегПоGPS,
+	ЕСТЬNULL(уатТС.ГосударственныйНомер, "") КАК ГосударственныйНомер
+ПОМЕСТИТЬ ВТ_ДанныеПутевого
+ИЗ
+	Документ.уатПутевойЛист КАК уатПутевойЛист
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.уатПутевойЛист.Задание КАК уатПутевойЛистЗадание
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.уатЗаказГрузоотправителя КАК уатЗаказГрузоотправителя
+			ПО уатПутевойЛистЗадание.ЗаказНаТС = уатЗаказГрузоотправителя.Ссылка
+		ПО уатПутевойЛист.Ссылка = уатПутевойЛистЗадание.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.уатПутевойЛист.РасходГСМ КАК уатПутевойЛистРасходГСМ
+		ПО уатПутевойЛист.Ссылка = уатПутевойЛистРасходГСМ.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.уатТС КАК уатТС
+		ПО уатПутевойЛист.ТранспортноеСредство = уатТС.Ссылка
+ГДЕ
+	уатПутевойЛист.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_Остатки.ПутевойЛист
+			ИЗ
+				ВТ_Остатки КАК ВТ_Остатки)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ_Остатки.ПутевойЛист КАК ПутевойЛист
+ПОМЕСТИТЬ ВТ_УникальныеПутевые
+ИЗ
+	ВТ_Остатки КАК ВТ_Остатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_УникальныеПутевые.ПутевойЛист КАК ПутевойЛист,
+	ЕСТЬNULL(уатВыработкаТСОбороты.КоличествоОборот, 0) КАК Пробег,
+	ЕСТЬNULL(уатРасходГСМнаТСОбороты.РасходПоФактуОборот, 0) КАК Расход,
+	0 КАК Заправлено
+ПОМЕСТИТЬ вт_расходы
+ИЗ
+	ВТ_УникальныеПутевые КАК ВТ_УникальныеПутевые
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.уатРасходГСМнаТС.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК уатРасходГСМнаТСОбороты
+		ПО ВТ_УникальныеПутевые.ПутевойЛист = уатРасходГСМнаТСОбороты.Регистратор
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.уатВыработкаТС.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ПараметрВыработки = ЗНАЧЕНИЕ(Справочник.уатПараметрыВыработки.ПробегОбщий)) КАК уатВыработкаТСОбороты
+		ПО ВТ_УникальныеПутевые.ПутевойЛист = уатВыработкаТСОбороты.Регистратор
+ГДЕ
+	уатВыработкаТСОбороты.ПараметрВыработки = ЗНАЧЕНИЕ(Справочник.уатПараметрыВыработки.ПробегОбщий)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	уатЗаправкаГСМЗаправки.ПутевойЛист,
+	0,
+	0,
+	СУММА(уатЗаправкаГСМЗаправки.Количество)
+ИЗ
+	Документ.уатЗаправкаГСМ.Заправки КАК уатЗаправкаГСМЗаправки
+ГДЕ
+	уатЗаправкаГСМЗаправки.Ссылка В
+			(ВЫБРАТЬ РАЗЛИЧНЫЕ
+				уатОстаткиГСМнаТСОбороты.Регистратор
+			ИЗ
+				РегистрНакопления.уатОстаткиГСМнаТС.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК уатОстаткиГСМнаТСОбороты)
+
+СГРУППИРОВАТЬ ПО
+	уатЗаправкаГСМЗаправки.ПутевойЛист
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_расходы.ПутевойЛист КАК Регистратор,
+	СУММА(вт_расходы.Пробег) КАК Пробег,
+	СУММА(вт_расходы.Расход) КАК Расход,
+	СУММА(вт_расходы.Заправлено) КАК Заправлено
+ПОМЕСТИТЬ ВТ_ПробегГСМ
+ИЗ
+	вт_расходы КАК вт_расходы
+
+СГРУППИРОВАТЬ ПО
+	вт_расходы.ПутевойЛист
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ_ДанныеПутевого.ПутевойЛист КАК ПутевойЛист,
+	ВТ_ДанныеПутевого.ID КАК ID,
+	ВТ_ДанныеПутевого.НомерСтроки КАК НомерСтроки,
+	ВТ_ДанныеПутевого.ВидТарифа КАК ВидТарифа
+ПОМЕСТИТЬ вт_первыеСтроки
+ИЗ
+	ВТ_ДанныеПутевого КАК ВТ_ДанныеПутевого
+ГДЕ
+	ВТ_ДанныеПутевого.НомерСтроки = 1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПробегГСМ.Регистратор КАК Регистратор,
+	ВТ_ПробегГСМ.Расход КАК Расход,
+	ВТ_ПробегГСМ.Пробег КАК Пробег,
+	ВТ_ПробегГСМ.Заправлено КАК Заправлено,
+	вт_первыеСтроки.ID КАК ID,
+	вт_первыеСтроки.ВидТарифа КАК ВидТарифа
+ПОМЕСТИТЬ ВТ_ДополнительныеДанныеПЛ
+ИЗ
+	вт_первыеСтроки КАК вт_первыеСтроки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ПробегГСМ КАК ВТ_ПробегГСМ
+		ПО (ВТ_ПробегГСМ.Регистратор = вт_первыеСтроки.ПутевойЛист)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Остатки.ПутевойЛист КАК ПутевойЛист,
+	ВТ_ДанныеПутевого.Дата КАК Дата,
+	ВТ_ДанныеПутевого.Номер КАК Номер,
+	ВТ_ДанныеПутевого.Смена КАК Смена,
+	ВТ_ДанныеПутевого.ТранспортноеСредство КАК ТранспортноеСредство,
+	ВТ_ДанныеПутевого.ГосударственныйНомер КАК ГосударственныйНомер,
+	ВТ_ДанныеПутевого.Водитель1 КАК Водитель1,
+	ЕСТЬNULL(ВТ_ДополнительныеДанныеПЛ.Пробег, 0) КАК Пробег,
+	ЕСТЬNULL(ВТ_ДополнительныеДанныеПЛ.Заправлено, 0) КАК Заправлено,
+	ЕСТЬNULL(ВТ_ДополнительныеДанныеПЛ.Расход, 0) КАК Расход,
+	ВТ_Остатки.ID КАК ID,
+	ВТ_Остатки.Проект КАК Проект,
+	ВТ_Остатки.ОбъектЗатрат КАК ОбъектЗатрат,
+	ВТ_ДанныеПутевого.ЗаказНаТС КАК ЗаказНаТС,
+	ВТ_ДанныеПутевого.Заказчик КАК Заказчик,
+	ВТ_ДанныеПутевого.Маршрут КАК Маршрут,
+	ВТ_Остатки.ВидТарифа КАК ВидТарифа,
+	ВТ_Остатки.Тариф КАК Тариф,
+	ВТ_Остатки.КоличествоНеВыставленоНаНачалоПериода КАК КоличествоНеВыставленоНаНачалоПериода,
+	ВТ_Остатки.СуммаНеВыставленоНаНачалоПериода КАК СуммаНеВыставленоНаНачалоПериода,
+	ВТ_Остатки.КоличествоНеВыставлено КАК КоличествоНеВыставлено,
+	ВТ_Остатки.СуммаНеВыставлено КАК СуммаНеВыставлено,
+	ВТ_Остатки.КоличествоВыставлено КАК КоличествоВыставлено,
+	ВТ_Остатки.СуммаВыставлено КАК СуммаВыставлено,
+	ВТ_Остатки.КоличествоПоПутевомуЛисту КАК КоличествоПоПутевомуЛисту,
+	ВТ_Остатки.СуммаПоПутевомуЛисту КАК СуммаПоПутевомуЛисту,
+	"Выставлено" КАК выставлено,
+	ВТ_ДанныеПутевого.НомерСтроки КАК НомерСтроки
+ПОМЕСТИТЬ вт_итог
+ИЗ
+	ВТ_Остатки КАК ВТ_Остатки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДанныеПутевого КАК ВТ_ДанныеПутевого
+		ПО ВТ_Остатки.ПутевойЛист = ВТ_ДанныеПутевого.ПутевойЛист
+			И ВТ_Остатки.ID = ВТ_ДанныеПутевого.ID
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДополнительныеДанныеПЛ КАК ВТ_ДополнительныеДанныеПЛ
+		ПО ВТ_Остатки.ПутевойЛист = ВТ_ДополнительныеДанныеПЛ.Регистратор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_итог.ПутевойЛист КАК ПутевойЛист,
+	вт_итог.Пробег КАК Пробег,
+	вт_итог.Заправлено КАК Заправлено,
+	вт_итог.Расход КАК Расход,
+	МИНИМУМ(вт_итог.НомерСтроки) КАК НомерСтроки
+ПОМЕСТИТЬ ВТ_ВыборДляПервыхСтрок
+ИЗ
+	вт_итог КАК вт_итог
+
+СГРУППИРОВАТЬ ПО
+	вт_итог.ПутевойЛист,
+	вт_итог.Пробег,
+	вт_итог.Заправлено,
+	вт_итог.Расход
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_итог.ПутевойЛист КАК ПутевойЛист,
+	вт_итог.Дата КАК Дата,
+	вт_итог.Номер КАК Номер,
+	вт_итог.Смена КАК Смена,
+	вт_итог.ТранспортноеСредство КАК ТранспортноеСредство,
+	вт_итог.ГосударственныйНомер КАК ГосударственныйНомер,
+	вт_итог.Водитель1 КАК Водитель1,
+	естьnull(ВТ_ВыборДляПервыхСтрок.Пробег, 0) КАК Пробег,
+	естьnull(ВТ_ВыборДляПервыхСтрок.Заправлено, 0) КАК Заправлено,
+	естьnull(ВТ_ВыборДляПервыхСтрок.Расход, 0) КАК Расход,
+	вт_итог.ID КАК ID,
+	вт_итог.Проект КАК Проект,
+	вт_итог.ОбъектЗатрат КАК ОбъектЗатрат,
+	вт_итог.ЗаказНаТС КАК ЗаказНаТС,
+	вт_итог.Заказчик КАК Заказчик,
+	вт_итог.Маршрут КАК Маршрут,
+	вт_итог.ВидТарифа КАК ВидТарифа,
+	вт_итог.Тариф КАК Тариф,
+	вт_итог.КоличествоНеВыставленоНаНачалоПериода КАК КоличествоНеВыставленоНаНачалоПериода,
+	вт_итог.СуммаНеВыставленоНаНачалоПериода КАК СуммаНеВыставленоНаНачалоПериода,
+	вт_итог.КоличествоНеВыставлено КАК КоличествоНеВыставлено,
+	вт_итог.СуммаНеВыставлено КАК СуммаНеВыставлено,
+	вт_итог.КоличествоВыставлено КАК КоличествоВыставлено,
+	вт_итог.СуммаВыставлено КАК СуммаВыставлено,
+	вт_итог.КоличествоПоПутевомуЛисту КАК КоличествоПоПутевомуЛисту,
+	вт_итог.СуммаПоПутевомуЛисту КАК СуммаПоПутевомуЛисту,
+	вт_итог.НомерСтроки КАК НомерСтроки
+ИЗ
+	вт_итог КАК вт_итог
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ВыборДляПервыхСтрок КАК ВТ_ВыборДляПервыхСтрок
+		ПО (вт_итог.ПутевойЛист = ВТ_ВыборДляПервыхСтрок.ПутевойЛист)
+			И (вт_итог.НомерСтроки = ВТ_ВыборДляПервыхСтрок.НомерСтроки)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоВыставлено</dataPath>
+		<expression>Сумма(КоличествоВыставлено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВыставлено</dataPath>
+		<expression>Сумма(СуммаВыставлено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНеВыставленоНаНачалоПериода</dataPath>
+		<expression>Сумма(СуммаНеВыставленоНаНачалоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПоПутевомуЛисту</dataPath>
+		<expression>Сумма(СуммаПоПутевомуЛисту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеВыставлено</dataPath>
+		<expression>Сумма(КоличествоНеВыставлено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеВыставленоНаНачалоПериода</dataPath>
+		<expression>Сумма(КоличествоНеВыставленоНаНачалоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПоПутевомуЛисту</dataPath>
+		<expression>Сумма(КоличествоПоПутевомуЛисту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНеВыставлено</dataPath>
+		<expression>Сумма(СуммаНеВыставлено)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ОтчетПоПутевымЛистамВПривязкеКРеестру</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПутевойЛист</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Смена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТранспортноеСредство</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГосударственныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Водитель1</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Водитель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пробег</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заправлено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Расход</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расход ГСМ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъектЗатрат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказНаТС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказчик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Маршрут</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидТарифа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тариф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НеВыставленоНаНачалоПериода</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНеВыставленоНаНачалоПериода</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНеВыставленоНаНачалоПериода</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПоПутевомуЛисту</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоПоПутевомуЛисту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПоПутевомуЛисту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выставлено</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВыставлено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВыставлено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НеВыставлено</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНеВыставлено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНеВыставлено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>ff0616c9-7895-409e-b9b7-d40f355d04f8</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПутевойЛист</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
