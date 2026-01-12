@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Колонна</dataPath>
+			<field>Колонна</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рассчитан</dataPath>
+			<field>Рассчитан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Модель</dataPath>
+			<field>Модель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель1</dataPath>
+			<field>Водитель1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредство</dataPath>
+			<field>ТранспортноеСредство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель2</dataPath>
+			<field>Водитель2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТоплива</dataPath>
+			<field>ВидТоплива</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоБензина</dataPath>
+			<field>КоличествоБензина</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерРегистратора</dataPath>
+			<field>НомерРегистратора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер регистратора</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистратора</dataPath>
+			<field>ДатаРегистратора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистратора</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПрибытия</dataPath>
+			<field>АдресПрибытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресУбытия</dataPath>
+			<field>АдресУбытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыезда</dataPath>
+			<field>ДатаВыезда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выезда</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПрибытия</dataPath>
+			<field>ДатаПрибытия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата прибытия</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЗаявки</dataPath>
+			<field>НомерЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер заявки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Моточасы</dataPath>
+			<field>Моточасы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЧасов</dataPath>
+			<field>КоличествоЧасов</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	прЗаданиеПЛ.Регистратор КАК Регистратор,
+	прЗаданиеПЛ.Водитель1 КАК Водитель1,
+	прЗаданиеПЛ.Водитель2 КАК Водитель2,
+	прЗаданиеПЛ.ТранспортноеСредство КАК ТранспортноеСредство,
+	прЗаданиеПЛ.АдресПрибытия КАК АдресПрибытия,
+	прЗаданиеПЛ.АдресУбытия КАК АдресУбытия,
+	прЗаданиеПЛ.ВремяУбытия КАК ВремяУбытия,
+	прЗаданиеПЛ.ВремяПрибытия КАК ВремяПрибытия,
+	прЗаданиеПЛ.Моточасы КАК Моточасы,
+	прЗаданиеПЛ.Сумма КАК Сумма,
+	прЗаданиеПЛ.ВидТоплива КАК ВидТоплива,
+	прЗаданиеПЛ.КоличествоБензина КАК КоличествоБензина,
+	прЗаданиеПЛ.КоличествоЧасов КАК КоличествоЧасов
+ПОМЕСТИТЬ ВТ_ДанныеРегистра
+ИЗ
+	РегистрНакопления.прЗаданиеПЛ КАК прЗаданиеПЛ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДанныеРегистра.Регистратор КАК Регистратор,
+	уатПутевойЛист.Рассчитан КАК Рассчитан,
+	ВТ_ДанныеРегистра.Водитель1 КАК Водитель1,
+	ВТ_ДанныеРегистра.Водитель2 КАК Водитель2,
+	уатТС.Модель КАК Модель,
+	ВТ_ДанныеРегистра.ТранспортноеСредство КАК ТранспортноеСредство,
+	ВТ_ДанныеРегистра.ВидТоплива КАК ВидТоплива,
+	ВТ_ДанныеРегистра.КоличествоБензина КАК КоличествоБензина,
+	уатПутевойЛист.Номер КАК НомерРегистратора,
+	уатПутевойЛист.Дата КАК ДатаРегистратора,
+	ВТ_ДанныеРегистра.АдресПрибытия КАК АдресПрибытия,
+	ВТ_ДанныеРегистра.АдресУбытия КАК АдресУбытия,
+	ВТ_ДанныеРегистра.ВремяУбытия КАК ДатаВыезда,
+	ВТ_ДанныеРегистра.ВремяПрибытия КАК ДатаПрибытия,
+	уатТС.Колонна КАК Колонна,
+	уатЗаказГрузоотправителя.Номер КАК НомерЗаявки,
+	ВТ_ДанныеРегистра.Сумма КАК Сумма,
+	ВТ_ДанныеРегистра.Моточасы КАК Моточасы,
+	ВТ_ДанныеРегистра.КоличествоЧасов КАК КоличествоЧасов
+ИЗ
+	ВТ_ДанныеРегистра КАК ВТ_ДанныеРегистра
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.уатПутевойЛист КАК уатПутевойЛист
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.уатПутевойЛист.Задание КАК уатПутевойЛистЗадание
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.уатЗаказГрузоотправителя КАК уатЗаказГрузоотправителя
+				ПО уатПутевойЛистЗадание.ЗаказНаТС = уатЗаказГрузоотправителя.Ссылка
+			ПО уатПутевойЛист.Ссылка = уатПутевойЛистЗадание.Ссылка
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.уатТС КАК уатТС
+			ПО уатПутевойЛист.ТранспортноеСредство = уатТС.Ссылка
+		ПО ВТ_ДанныеРегистра.Регистратор = уатПутевойЛист.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ДанныеРегистра.Регистратор,
+	NULL,
+	ВТ_ДанныеРегистра.Водитель1,
+	ВТ_ДанныеРегистра.Водитель2,
+	уатТС.Модель,
+	ВТ_ДанныеРегистра.ТранспортноеСредство,
+	ВТ_ДанныеРегистра.ВидТоплива,
+	ВТ_ДанныеРегистра.КоличествоБензина,
+	прАктОКонсервацииТехники.Номер,
+	прАктОКонсервацииТехники.Дата,
+	ВТ_ДанныеРегистра.АдресПрибытия,
+	ВТ_ДанныеРегистра.АдресУбытия,
+	ВТ_ДанныеРегистра.ВремяУбытия,
+	ВТ_ДанныеРегистра.ВремяПрибытия,
+	уатТС.Колонна,
+	уатЗаказГрузоотправителя.Номер,
+	ВТ_ДанныеРегистра.Сумма,
+	ВТ_ДанныеРегистра.Моточасы,
+	ВТ_ДанныеРегистра.КоличествоЧасов
+ИЗ
+	ВТ_ДанныеРегистра КАК ВТ_ДанныеРегистра
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.прАктОКонсервацииТехники КАК прАктОКонсервацииТехники
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.уатТС КАК уатТС
+			ПО прАктОКонсервацииТехники.ТранспортноеСредство = уатТС.Ссылка
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.уатЗаказГрузоотправителя КАК уатЗаказГрузоотправителя
+			ПО прАктОКонсервацииТехники.ЗаявкаНаТС = уатЗаказГрузоотправителя.Ссылка
+		ПО ВТ_ДанныеРегистра.Регистратор = прАктОКонсервацииТехники.Ссылка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоБензина</dataPath>
+		<expression>Сумма(КоличествоБензина)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЧасов</dataPath>
+		<expression>Сумма(КоличествоЧасов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Моточасы</dataPath>
+		<expression>Сумма(Моточасы)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ОтчетПоПутевымЛистам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по путевым листам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рассчитан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Водитель1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Водитель2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Модель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТранспортноеСредство</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерРегистратора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРегистратора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресУбытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПрибытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПрибытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Колонна</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерЗаявки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидТоплива</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоБензина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Моточасы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЧасов</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>518c9e7e-0709-43d6-97be-72427608942e</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовБежевый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Регистратор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
