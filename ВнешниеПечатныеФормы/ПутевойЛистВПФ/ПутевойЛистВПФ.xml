@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
-	<ExternalDataProcessor uuid="d9dc78ae-d5b9-434b-9598-6b01b8e28fa5">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<ExternalDataProcessor uuid="bb8eae24-85e2-4940-a512-805fa4211cda">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>c3831ec8-d8d5-4f93-8a22-f9bfae07327f</xr:ClassId>
-				<xr:ObjectId>dfff90a0-650e-48dd-a6c7-002e356643dc</xr:ObjectId>
+				<xr:ObjectId>2438e5f1-095e-4f8d-a686-613d44dada94</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalDataProcessorObject.ПутевойЛистВПФ" category="Object">
-				<xr:TypeId>a2d650b8-1753-4798-8559-d1f8e15e132d</xr:TypeId>
-				<xr:ValueId>d3f5ca4b-6abd-4524-a53f-1677fb3a586f</xr:ValueId>
+				<xr:TypeId>2ef64629-c770-49b1-90b0-53f8a92971ba</xr:TypeId>
+				<xr:ValueId>c9201984-28f9-49ce-964c-dfae12a8ef22</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>

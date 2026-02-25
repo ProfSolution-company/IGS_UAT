@@ -12939,7 +12939,7 @@
 		<width>64</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<textPlacement>Auto</textPlacement>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
